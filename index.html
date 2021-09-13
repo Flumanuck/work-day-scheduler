@@ -25,7 +25,7 @@
       <div class="col border-top border-bottom border-dark">
         9 am
       </div>
-      <div class="col-6 border border-dark">
+      <div contenteditable="true"class="col-6 border border-dark">
         filler
       </div>
       <div class="col  border-top border-bottom border-dark">
@@ -36,7 +36,7 @@
       <div class="col border-bottom border-dark">
         10 am
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -47,7 +47,7 @@
       <div class="col border-bottom border-dark">
         11 am
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -58,7 +58,7 @@
       <div class="col border-bottom border-dark">
         12 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -69,7 +69,7 @@
       <div class="col border-bottom border-dark">
         1 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark task">
@@ -80,7 +80,7 @@
       <div class="col border-bottom border-dark">
         2 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -91,7 +91,7 @@
       <div class="col border-bottom border-dark">
         3 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -102,7 +102,7 @@
       <div class="col border-bottom border-dark">
         4 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -113,7 +113,7 @@
       <div class="col border-bottom border-dark">
         5 pm
       </div>
-      <div class="col-6 border-left border-right border-bottom border-dark task">
+      <div contenteditable="true" class="col-6 border-left border-right border-bottom border-dark task">
         filler
       </div>
       <div class="col border-bottom border-dark">
@@ -125,14 +125,20 @@
 
 
 
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+    </script>
+    <script>
+    console.log(moment.locale());
+    console.log(parseInt(moment().format('LT'), 10))
+    console.log(moment().format('LT'))
+    if((moment().format('LT')).includes("6:" || "7:" || "8:" || "9:" || "10:" || "11:" || "12:") && (moment().format('LT')).includes("PM")) {
+      console.log("It works")
+    }
+    else{
+      console.log("It does not work.")
+    }
     
     </script>
 </body>
